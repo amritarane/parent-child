@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>parent page</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+</head>
+<body>
+    
+    <center>
+        <h1>
+            <button class="btn btn-primary"> parent class</button>
+        </h1>
+    </center>
+    <div class="alert alert-success" role="alert">
+        this is property of parent class
+    </div>
+    <!-- Basic dropdown -->
+<button class="btn btn-danger dropdown-toggle mr-4" type="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">color dropdown</button>
+
+<div class="dropdown-menu">
+<a class="dropdown-item" href="#" style="color: blue;">blue</a>
+<a class="dropdown-item" href="#" style="color: red;">red</a>
+<a class="dropdown-item" href="#" style="color: green;">green</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="#" style="color: violet;" >voilet</a>
+</div>
+<!-- Basic dropdown -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+    {% block body_block %}
+
+    
+    {% endblock %}
+</body>
+</html>
